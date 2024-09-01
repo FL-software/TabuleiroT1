@@ -20,7 +20,7 @@ estou na fase do inicio
 
 INICIO
 
-1.o jogador escolhe uma raça dentre as 12 opções possiveis ou uma facção.
+1. O jogador escolhe uma raça dentre as 12 opções possiveis ou uma facção.
 
 Feito isso, ele vai receber um pacotao automatico do tipo.
 
