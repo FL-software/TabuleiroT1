@@ -1,49 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabuleiro T1</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <a href="view/inicio.html" class="link-inicio">
-            <div class="logo">
-                <img src="img/logo.png" alt="Logo do Jogo">
-                <h1>Tabuleiro T1</h1>
-            </div>
-        </a>
-        <nav>
-            <ul>
-                <li><a href="#" class="menu-principal">Regras</a>
-                    <ul class="submenu">
-                        <li>
-                            <a href="view/regras-basicas.html">Básicas</a>
-                        </li>
-                        <li>
-                            <a href="view/regras-avancadas.html">Avançadas</a>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="#" class="menu-principal">Jogo</a>
-                    <ul class="submenu">
-                        <li>
-                            <a href="view/jogo-novo.html">Novo</a>
-                        </li>
-                        <li>
-                            <a href="view/jogo-continuar.html">Continuar</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main id="main-content">
-    </main>
-    <footer>
-        <a href="view/sobre.html" class="link-rodape">© 2024 Tabuleiro T1</a>
-    </footer>
-    <script src="js/script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabuleiro T1</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+    </head>
+    <body>
+        <header>
+            <a href="view/inicio.html" class="link-inicio">
+                <div class="logo">
+                    <img src="img/logo.png" alt="Logo do Jogo">
+                    <h1>Tabuleiro T1</h1>
+                </div>
+            </a>
+            <nav>
+                <ul class="menu">
+                    <li class="item-menu">
+                        <a href="#" class="menu-principal">Regras</a>
+                        <ul class="submenu">
+                            <li class="item-submenu">
+                                <a href="view/regras-basicas.html">Básicas</a>
+                            </li>
+                            <li class="item-submenu">
+                                <a href="view/regras-avancadas.html">Avançadas</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item-menu">
+                        <a href="#" class="menu-principal">Jogo</a>
+                        <ul class="submenu">
+                            <li class="item-submenu">
+                                <a href="view/jogo-novo.html">Novo</a>
+                            </li>
+                            <li class="item-submenu">
+                                <a href="view/jogo-continuar.html">Continuar</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <button id="menu-toggle" class="menu-icon">
+                &#9776; <!-- Código HTML para o ícone de três linhas -->
+            </button>
+        </header>
+        <main id="main-content">
+        </main>
+        <footer>
+            <a href="view/sobre.html" class="link-rodape">© 2024 Tabuleiro T1</a>
+        </footer>
+        <script src="js/menu.js"></script>
+    </body>
 </html>

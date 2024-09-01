@@ -3,6 +3,7 @@
   --cor-secundaria:#333; /* Cor secundária */
   --cor-texto: #333; /* Cor do texto */
   --cor-texto-secundaria: #fff; /* Cor do texto */
+  --cor-texto-terciaria: #727171; /* Cor do texto */
   --cor-fundo: #fff; /* Cor de fundo */
   --cor-destaque: #db5656; /* Cor de destaque */
 }
@@ -10,7 +11,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Libre Baskerville", sans-serif;
+  font-weight: 400;
   overflow: hidden; /* Impede scroll no body */
 }
 
@@ -26,10 +28,7 @@ header {
   color: var(--cor-texto-secundaria); 
 }
 
-  .link-inicio:visited {
-    color: var(--cor-texto-secundaria); 
-  }
-
+  .link-inicio:visited ,
   .link-inicio:hover {
     color: var(--cor-destaque); 
   }
@@ -74,6 +73,14 @@ nav a:hover {
   color: var(--cor-destaque); 
 }
 
+.ativo {
+  color: var(--cor-texto-terciaria); 
+}
+
+.item-menu {
+  padding-left: 10px;
+}
+
 .submenu {
   display: none; /* Oculta o submenu por padrão */
   position: absolute; /* Posiciona o submenu em relação ao item de menu */
@@ -82,6 +89,7 @@ nav a:hover {
   background-color: var(--cor-principal);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1; /* Asegura que o submenu fique acima dos outros elementos */
+  margin-top: 10px;
 }
 
 .submenu li {
@@ -101,12 +109,12 @@ main {
   background-size: cover; /* Ajusta a imagem para cobrir todo o main */
   background-color: rgba(255, 255, 255, 0.8); /* Define a cor de fundo com opacidade */
   background-blend-mode: lighten; /* Mistura a imagem com o fundo branco */
-  min-height: calc(100vh - 110px); /* Calcula a altura do main subtraindo o header e o footer */
+  min-height: calc(100vh - 115px); /* Calcula a altura do main subtraindo o header e o footer */
 }
 
 .content {
   padding: 0 20px;
-  max-height: calc(100vh - 110px); /* Calcula a altura do main subtraindo o header e o footer */
+  max-height: calc(100vh - 115px); /* Calcula a altura do main subtraindo o header e o footer */
   overflow: auto; /* Permite scroll vertical no main */
 }
 
@@ -182,7 +190,8 @@ footer {
   color: var(--cor-texto-secundaria); 
 }
 
-  .link-rodape:visited {
+  .link-rodape:visited,
+  .link-rodape:active {
     color: var(--cor-texto-secundaria); 
   }
 
@@ -190,6 +199,68 @@ footer {
     color: var(--cor-destaque); 
   }
 
-  .link-rodape:active {
+/* Ícone do menu mobile */
+.menu-icon {
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: var(--cor-texto-secundaria);
+  cursor: pointer;
+  display: none;
+  margin-right: 20px;
+}
+
+/* Media Queries para mobile */
+@media (max-width: 768px) {
+  header {
+    justify-content: space-between;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column; /* Faz com que os itens fiquem em coluna */
+    width: 100%; /* Ocupa toda a largura */
+    background-color: var(--cor-secundaria); /* Mesma cor do header */
+    position: absolute;
+    top: 60px; /* Posiciona abaixo do header */
+    left: 0;
+    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+    margin-top: 10px;
+  }
+
+  nav.ativo ul {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .item-menu {
+    margin-bottom: 20px;
+  }
+
+  /* Submenu no mobile */
+  .submenu {
+    position: static; /* Remove o posicionamento absoluto no mobile */
+    box-shadow: none;
+    background-color: var(--cor-secundaria);
+  }
+
+  .submenu li {
+    padding: 15px 15px 0;
+  }
+
+  .submenu a {
     color: var(--cor-texto-secundaria); 
   }
+
+  /* Estilo para o item de submenu ao ser clicado */
+  nav ul li:hover .submenu {
+    display: none; /* Desativa o hover */
+  }
+
+  nav ul li.ativo .submenu {
+    display: block; /* Exibe o submenu ao clicar no item principal */
+  }
+}
