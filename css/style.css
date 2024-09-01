@@ -1,0 +1,195 @@
+:root {
+  --cor-principal: #fff; /* Cor principal */
+  --cor-secundaria:#333; /* Cor secundária */
+  --cor-texto: #333; /* Cor do texto */
+  --cor-texto-secundaria: #fff; /* Cor do texto */
+  --cor-fundo: #fff; /* Cor de fundo */
+  --cor-destaque: #db5656; /* Cor de destaque */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow: hidden; /* Impede scroll no body */
+}
+
+header {
+  background-color: var(--cor-secundaria); 
+  color: var(--cor-texto); 
+  display: flex;
+  align-items: center;
+}
+
+.link-inicio {
+  text-decoration: none; /* Remove a decoração do link */
+  color: var(--cor-texto-secundaria); 
+}
+
+  .link-inicio:visited {
+    color: var(--cor-texto-secundaria); 
+  }
+
+  .link-inicio:hover {
+    color: var(--cor-destaque); 
+  }
+
+  .link-inicio:active {
+    color: var(--cor-texto-secundaria); 
+  }
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 60px;
+  height: 50px;
+  margin: 10px;
+}
+
+nav {
+  margin: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 5px;
+  position: relative; /* Para posicionar o submenu */
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--cor-texto-secundaria); 
+}
+
+nav a:hover {
+  color: var(--cor-destaque); 
+}
+
+.submenu {
+  display: none; /* Oculta o submenu por padrão */
+  position: absolute; /* Posiciona o submenu em relação ao item de menu */
+  top: 100%; /* Posiciona o submenu abaixo do item de menu */
+  left: 0;
+  background-color: var(--cor-principal);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Asegura que o submenu fique acima dos outros elementos */
+}
+
+.submenu li {
+  padding: 10px;
+}
+
+.submenu a {
+  color: #333;
+  display: block; /* Exibe cada link do submenu em uma linha */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+main {
+  padding: 0;
+  position: relative; /* Necessário para o background-image funcionar */
+  background-image: url('/img/fundo.png'); /* Define a imagem de fundo */
+  background-size: cover; /* Ajusta a imagem para cobrir todo o main */
+  background-color: rgba(255, 255, 255, 0.8); /* Define a cor de fundo com opacidade */
+  background-blend-mode: lighten; /* Mistura a imagem com o fundo branco */
+  min-height: calc(100vh - 110px); /* Calcula a altura do main subtraindo o header e o footer */
+}
+
+.content {
+  padding: 0 20px;
+  max-height: calc(100vh - 110px); /* Calcula a altura do main subtraindo o header e o footer */
+  overflow: auto; /* Permite scroll vertical no main */
+}
+
+.tabela-regras {
+  border-collapse: collapse; /* Remove espaços entre bordas de células */
+  font-family: "Arial", sans-serif; /* Define a fonte da tabela */
+}
+
+.tabela-regras th {
+  background-color: var(--cor-principal); /* Cor de fundo do cabeçalho da tabela */
+  border: 1px solid var(--cor-principal); /* Borda do cabeçalho da tabela */
+  padding: 8px; /* Espaçamento interno das células do cabeçalho */
+  text-align: left; /* Alinhamento do texto do cabeçalho */
+  font-weight: bold; /* Estilo de fonte do cabeçalho */
+}
+
+.tabela-regras td {
+  border: 1px solid var(--cor-principal); /* Borda das células da tabela */
+  padding: 8px; /* Espaçamento interno das células */
+}
+
+.tabela-regras tr:nth-child(even) {
+  background-color: var(--cor-principal); /* Cor de fundo para linhas pares */
+}
+
+/* Estilos para a seção "Regras Básicas" */
+#regras-basicas .tabela-regras th {
+  /* Estilos específicos para o cabeçalho da tabela da seção "Regras Básicas" */
+  background-color: var(--cor-principal);
+  color: var(--cor-texto); 
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
+#regras-basicas .tabela-regras td {
+  /* Estilos específicos para as células da tabela da seção "Regras Básicas" */
+  font-size: 12px;
+  padding: 6px 10px;
+  text-align: center;
+}
+
+#regras-basicas .tabela-regras tr:nth-child(even) {
+  /* Estilos específicos para linhas pares da tabela da seção "Regras Básicas" */
+  background-color: var(--cor-principal);
+}
+
+/* Estilos adicionais para a tabela */
+#regras-basicas .tabela-regras th:first-child {
+  /* Estilos específicos para a primeira coluna do cabeçalho */
+  width: 20%;
+  text-align: left;
+}
+
+#regras-basicas .tabela-regras td:first-child {
+  /* Estilos específicos para a primeira coluna das células */
+  width: 20%;
+}
+
+footer {
+  background-color: var(--cor-secundaria); 
+  color: var(--cor-texto-secundaria); 
+  padding: 5px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.link-rodape {
+  text-decoration: none; /* Remove a decoração do link */
+  color: var(--cor-texto-secundaria); 
+}
+
+  .link-rodape:visited {
+    color: var(--cor-texto-secundaria); 
+  }
+
+  .link-rodape:hover {
+    color: var(--cor-destaque); 
+  }
+
+  .link-rodape:active {
+    color: var(--cor-texto-secundaria); 
+  }
