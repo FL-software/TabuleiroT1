@@ -2,7 +2,7 @@
   --cor-principal: #fff; /* Cor principal */
   --cor-secundaria:#333; /* Cor secundária */
   --cor-texto: #333; /* Cor do texto */
-  --cor-texto-secundaria: #fff; /* Cor do texto */
+  --cor-texto-secundaria: #a59e37; /* Cor do texto */
   --cor-texto-terciaria: #727171; /* Cor do texto */
   --cor-fundo: #fff; /* Cor de fundo */
   --cor-destaque: #db5656; /* Cor de destaque */
@@ -14,6 +14,7 @@ body {
   font-family: "Libre Baskerville", sans-serif;
   font-weight: 400;
   overflow: hidden; /* Impede scroll no body */
+  color: var(--cor-texto); 
 }
 
 header {
@@ -21,6 +22,7 @@ header {
   color: var(--cor-texto); 
   display: flex;
   align-items: center;
+  height: 15vh;
 }
 
 .link-inicio {
@@ -102,19 +104,23 @@ nav a:hover {
   text-align: left; /* Alinha o texto à esquerda */
 }
 
+.item-submenu {
+  white-space: nowrap;
+}
+
 main {
   padding: 0;
   position: relative; /* Necessário para o background-image funcionar */
-  background-image: url('/img/fundo.png'); /* Define a imagem de fundo */
+  background-image: url('/img/fundo.jpg'); /* Define a imagem de fundo */
   background-size: cover; /* Ajusta a imagem para cobrir todo o main */
   background-color: rgba(255, 255, 255, 0.8); /* Define a cor de fundo com opacidade */
   background-blend-mode: lighten; /* Mistura a imagem com o fundo branco */
-  min-height: calc(100vh - 115px); /* Calcula a altura do main subtraindo o header e o footer */
+  min-height: 82vh; /* Calcula a altura do main subtraindo o header e o footer */
 }
 
 .content {
   padding: 0 20px;
-  max-height: calc(100vh - 115px); /* Calcula a altura do main subtraindo o header e o footer */
+  max-height: 82vh; /* Calcula a altura do main subtraindo o header e o footer */
   overflow: auto; /* Permite scroll vertical no main */
 }
 
@@ -183,6 +189,7 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
+  height: 3vh;
 }
 
 .link-rodape {
@@ -211,7 +218,7 @@ footer {
 }
 
 /* Media Queries para mobile */
-@media (max-width: 768px) {
+@media (max-width: 920px) {
   header {
     justify-content: space-between;
   }
@@ -225,7 +232,7 @@ footer {
     top: 60px; /* Posiciona abaixo do header */
     left: 0;
     z-index: 1000; /* Garante que o menu fique acima de outros elementos */
-    margin-top: 10px;
+    margin-top: 6vh;
   }
 
   nav.ativo ul {
