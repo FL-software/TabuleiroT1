@@ -22,7 +22,7 @@ header {
   color: var(--cor-texto); 
   display: flex;
   align-items: center;
-  height: 15vh;
+  height: 10vh;
 }
 
 .link-inicio {
@@ -115,12 +115,12 @@ main {
   background-size: cover; /* Ajusta a imagem para cobrir todo o main */
   background-color: rgba(255, 255, 255, 0.8); /* Define a cor de fundo com opacidade */
   background-blend-mode: lighten; /* Mistura a imagem com o fundo branco */
-  min-height: 82vh; /* Calcula a altura do main subtraindo o header e o footer */
+  min-height: 87vh; /* Calcula a altura do main subtraindo o header e o footer */
 }
 
 .content {
   padding: 0 20px;
-  max-height: 82vh; /* Calcula a altura do main subtraindo o header e o footer */
+  max-height: 87vh; /* Calcula a altura do main subtraindo o header e o footer */
   overflow: auto; /* Permite scroll vertical no main */
 }
 
@@ -232,7 +232,7 @@ footer {
     top: 60px; /* Posiciona abaixo do header */
     left: 0;
     z-index: 1000; /* Garante que o menu fique acima de outros elementos */
-    margin-top: 6vh;
+    margin-top: 1vh;
   }
 
   nav.ativo ul {
