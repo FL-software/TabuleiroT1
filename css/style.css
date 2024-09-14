@@ -115,7 +115,7 @@ main {
   background-size: cover; /* Ajusta a imagem para cobrir todo o main */
   background-color: rgba(255, 255, 255, 0.8); /* Define a cor de fundo com opacidade */
   background-blend-mode: lighten; /* Mistura a imagem com o fundo branco */
-  min-height: 87vh; /* Calcula a altura do main subtraindo o header e o footer */
+  min-height: 86vh; /* Calcula a altura do main subtraindo o header e o footer */
 }
 
 .content {
