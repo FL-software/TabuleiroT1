@@ -124,6 +124,37 @@ main {
   overflow: auto; /* Permite scroll vertical no main */
 }
 
+/* Estiliza as seções da página */
+section {
+  display: flex; /* Usa Flexbox para layout */
+  flex-direction: column; /* Alinha os itens na vertical */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  margin-bottom: 1rem; /* Espaçamento abaixo de cada seção */
+}
+
+/* Estiliza os inputs dentro das seções */
+section input {
+  width: 20rem; /* Largura dos inputs */
+  border: none; /* Remove a borda padrão */
+  padding: 1rem; /* Espaçamento interno */
+  border-radius: 1.5rem; /* Borda arredondada */
+  margin-bottom: 1rem; /* Espaçamento abaixo dos inputs */
+  color: var(--cor-texto-principal); /* Cor do texto */
+  font-size: 1rem; /* Tamanho da fonte */
+  box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+/* Estiliza os botões dentro das seções */
+section button {
+  padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
+  border: none; /* Remove a borda padrão */
+  border-radius: 1.5rem; /* Borda arredondada */
+  background-color: var(--cor-principal); /* Cor de fundo do botão */
+  color: var(--cor-texto-principal); /* Cor do texto do botão */
+  font-size: 1rem; /* Tamanho da fonte */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
 .tabela-regras {
   border-collapse: collapse; /* Remove espaços entre bordas de células */
   font-family: "Arial", sans-serif; /* Define a fonte da tabela */
@@ -232,7 +263,8 @@ footer {
     top: 60px; /* Posiciona abaixo do header */
     left: 0;
     z-index: 1000; /* Garante que o menu fique acima de outros elementos */
-    margin-top: 1vh;
+    margin-top: 2vh;
+    padding-top: 2vh;
   }
 
   nav.ativo ul {
@@ -252,6 +284,7 @@ footer {
     position: static; /* Remove o posicionamento absoluto no mobile */
     box-shadow: none;
     background-color: var(--cor-secundaria);
+    padding: 0;
   }
 
   .submenu li {
