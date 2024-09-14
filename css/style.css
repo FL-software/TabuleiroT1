@@ -50,6 +50,10 @@ header {
   margin: 10px;
 }
 
+.foto {
+  width: 300px;
+}
+
 nav {
   margin: 10px;
 }
@@ -80,7 +84,8 @@ nav a:hover {
 }
 
 .item-menu {
-  padding-left: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .submenu {
@@ -155,12 +160,12 @@ section button {
   cursor: pointer; /* Muda o cursor para indicar que é clicável */
 }
 
-.tabela-regras {
+.tabela {
   border-collapse: collapse; /* Remove espaços entre bordas de células */
   font-family: "Arial", sans-serif; /* Define a fonte da tabela */
 }
 
-.tabela-regras th {
+.tabela th {
   background-color: var(--cor-principal); /* Cor de fundo do cabeçalho da tabela */
   border: 1px solid var(--cor-principal); /* Borda do cabeçalho da tabela */
   padding: 8px; /* Espaçamento interno das células do cabeçalho */
@@ -168,17 +173,17 @@ section button {
   font-weight: bold; /* Estilo de fonte do cabeçalho */
 }
 
-.tabela-regras td {
+.tabela td {
   border: 1px solid var(--cor-principal); /* Borda das células da tabela */
   padding: 8px; /* Espaçamento interno das células */
 }
 
-.tabela-regras tr:nth-child(even) {
+.tabela tr:nth-child(even) {
   background-color: var(--cor-principal); /* Cor de fundo para linhas pares */
 }
 
 /* Estilos para a seção "Regras Básicas" */
-#regras-basicas .tabela-regras th {
+.tabela th {
   /* Estilos específicos para o cabeçalho da tabela da seção "Regras Básicas" */
   background-color: var(--cor-principal);
   color: var(--cor-texto); 
@@ -187,29 +192,6 @@ section button {
   padding: 8px 12px;
 }
 
-#regras-basicas .tabela-regras td {
-  /* Estilos específicos para as células da tabela da seção "Regras Básicas" */
-  font-size: 12px;
-  padding: 6px 10px;
-  text-align: center;
-}
-
-#regras-basicas .tabela-regras tr:nth-child(even) {
-  /* Estilos específicos para linhas pares da tabela da seção "Regras Básicas" */
-  background-color: var(--cor-principal);
-}
-
-/* Estilos adicionais para a tabela */
-#regras-basicas .tabela-regras th:first-child {
-  /* Estilos específicos para a primeira coluna do cabeçalho */
-  width: 20%;
-  text-align: left;
-}
-
-#regras-basicas .tabela-regras td:first-child {
-  /* Estilos específicos para a primeira coluna das células */
-  width: 20%;
-}
 
 footer {
   background-color: var(--cor-secundaria); 
@@ -264,7 +246,6 @@ footer {
     left: 0;
     z-index: 1000; /* Garante que o menu fique acima de outros elementos */
     margin-top: 2vh;
-    padding-top: 2vh;
   }
 
   nav.ativo ul {
@@ -276,7 +257,8 @@ footer {
   }
 
   .item-menu {
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   /* Submenu no mobile */
@@ -285,10 +267,6 @@ footer {
     box-shadow: none;
     background-color: var(--cor-secundaria);
     padding: 0;
-  }
-
-  .submenu li {
-    padding: 15px 15px 0;
   }
 
   .submenu a {
